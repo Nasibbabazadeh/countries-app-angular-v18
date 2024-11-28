@@ -1,14 +1,21 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { CountriesComponent } from './components/countries/countries.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: AppComponent
-    },
-    {
-        path: 'countries',
-        component: CountriesComponent
+        component: MainLayoutComponent,
+        children: [
+            {
+                path: '',
+                component: HomeComponent
+            },
+            {
+                path: 'countries',
+                component: CountriesComponent
+            }
+        ]
     }
 ];

@@ -1,11 +1,12 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { AllCountriesService } from '../../services/all-countries/all-countries.service';
 import { IAllCountries } from '../../models/allCountries.model';
+import { CountryCardComponent } from "../cards/country-card/country-card.component";
 
 @Component({
   selector: 'app-countries',
   standalone: true,
-  imports: [],
+  imports: [CountryCardComponent],
   templateUrl: './countries.component.html',
   styleUrl: './countries.component.scss'
 })
